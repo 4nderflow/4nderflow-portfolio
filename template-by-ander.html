@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4nderflow's portfolio template</title>
+    <link rel="shortcut icon" href="assets/img/mita-pfp.jpg" type="image/x-icon">
+    <meta property="og:title" content="YOUR TITLE GOES HERE">
+    <meta property="og:description" content="YOUR DESCRIPTION">
+    <meta property="og:image" content="assets/img/mita-pfp.png">
+    <meta property="og:type" content="GitHub: 4nderflow">
+
+    <style>
+        /* == vaar ==*/
+:root {
+    --main-color: black;
+    --second-color: white;
+    --header-size: 2.3em;
+    --text-size: 1em;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(to bottom, black, blue) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Tahoma, sans-serif;
+}
+
+/* == nav */
+nav {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 30px auto;
+    gap: 30px;
+    width: fit-content;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: rgba(29, 29, 29, 0.5);
+    backdrop-filter: blur(25px);
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgb(20,20,20),
+    0 0 30px rgb(255,255,255,0.1);
+    z-index: 1;
+    border: 1px solid rgb(255,255,255,0.3);
+}
+
+nav a {
+    color: var(--second-color);
+    font-size: var(--text-size);
+    text-decoration: none;
+    transition: opacity .2s ease-in-out;
+
+}
+
+nav a:hover {
+    opacity: .5;
+}
+
+nav a[id="links"] {
+    position: relative;
+}
+
+nav a[id="links"]::after {
+    position: absolute;
+    content: ">";
+    right: 0;
+    bottom: 5px;
+    left: 45px;
+    transform: rotate(90deg);
+    opacity: 0;
+    transition: opacity .2s ease-in-out,transform .2s ease-in-out;
+}
+
+nav a[id="links"]:hover::after {
+   opacity: 1;
+}
+
+.nav-bar-links-contain {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: -30px auto;
+    gap: 30px;
+    opacity: 1;
+    width: fit-content;
+    opacity: 0;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    background: rgba(29, 29, 29, 0.5);
+    backdrop-filter: blur(25px);
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgb(20,20,20),
+    0 0 30px rgb(255,255,255,0.1);
+    border-bottom: 1px solid rgb(255,255,255,0.3);
+    border-left: 1px solid rgb(255,255,255,0.3);
+    border-right: 1px solid rgb(255,255,255,0.3);
+}
+
+.nav-bar-links-contain a {
+    color: var(--second-color);
+    font-size: var(--text-size);
+    text-decoration: none;
+    transition: opacity .2s ease-in-out;
+
+}
+
+.nav-bar-links-contain a:hover {
+    opacity: .5;
+}
+
+/* == profile ==*/
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin: 80px auto;
+}
+
+.profile h1 {
+    color: var(--second-color);
+    font-size: 2.1em;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    
+}
+
+.profile span {
+    pointer-events: none;
+    opacity: .5;
+}
+
+.profile p {
+    color: var(--second-color);
+    font-size: var(--text-size);
+    font-weight: 300;
+    opacity: .9;
+}
+
+.profile img {
+    height: 265px;
+    border-radius: 100%;
+    box-shadow: 0 0 30px rgb(30,30,30);
+}
+
+/* == about me==*/
+.about-me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 160px auto;
+    flex-direction: column;
+} 
+
+.about-me h1 {
+    font-size: var(--header-size);
+    color: var(--second-color);
+   
+}
+
+.about-me .desc {
+    display: flex;
+    pointer-events: none;
+    align-items: center;
+    width: 70%;
+    justify-content: center;
+    margin: 90px auto;
+    height: 200px;
+    padding: 5px 10px 5px 10px;
+    background: rgb(10,10,10,0.5);
+    box-shadow: 0 0 10px rgb(10,10,10);
+    border: 1px solid rgb(255,255,255,0.5);
+    border-radius: 10px;
+}
+.about-me i {
+    color: var(--second-color);
+    font-weight: 300;
+    text-align: center;
+}
+
+/* == tech stacks */
+.tech-stacks {
+    display: flex;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    width: 100%;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    background: linear-gradient(to bottom, rgb(10,10,10), rgb(27, 27, 27));
+}
+
+.tech-stacks h1 {
+    color: var(--second-color);
+    font-size: var(--header-size);
+   
+}
+
+.tech-stacks .stacks-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tech-stacks .stacks-list .stack {
+    display: flex;
+    animation: anim_1 5s infinite;
+    pointer-events: none;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 30px 10px 30px;
+    background: rgb(255, 255, 255);
+    border-radius: 35px;
+    box-shadow: 0 0 10px rgb(255,255,255,0.1);
+}
+.tech-stacks img {
+    height: 35px;
+    
+}
+
+.tech-stacks a {
+    padding: 10px 15px 10px 10px;
+    color: var(--second-color);
+    background: rgb(153, 153, 255);
+    text-decoration: none;
+    border-radius: 25px;
+    transition: opacity .2s ease-in-out;
+   
+}
+
+.tech-stacks a:hover {
+    opacity: .5;
+}
+
+.tech-stacks .second-head {
+    margin-top: 150px;
+    margin-bottom: 30px;
+}
+/* keyf */
+@keyframes anim_1{
+    0% {
+      transform: translateY(0px);  
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#stacks">Tech Stacks</a>
+        <a href="#"  id="links">Links</a>
+    </nav>
+
+    <div class="nav-bar-links-contain">
+        <a href="">Join Server</a>
+        <a href="#">YouTube</a>
+        <a href="#">GitHub</a>
+    </div>
+
+    <section class="profile">
+        <img src="assets/img/mita-pfp.jpg" alt="my profile picture">
+        <h1>User <span>#0000</span></h1>
+        <p>your role</p>
+    </section>
+
+    <section id="about" class="about-me">
+        <h1>About Me:</h1>
+        <div class="desc">
+            <i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam sed suscipit, itaque fugiat, minima magni illum accusamus quis commodi in tempore doloremque vitae sint expedita voluptates minus exercitationem dolorem deleniti.</i>
+        </div>
+
+      
+
+    </section>
+
+    <section id="stacks" class="tech-stacks">
+        <h1>💻 Tech Stack:</h1>
+
+        <div class="stacks-list">
+            <div class="first stack">
+                <img src="assets/icons/tech stacks/html-5.png" alt="">
+                <p>HTML5</p>
+            </div>
+
+            <div class="second stack">
+                <img src="assets/icons/tech stacks/css-3.png" alt="">
+                <p>CSS3</p>
+            </div>
+
+            <div class="third stack">
+                <img src="assets/icons/tech stacks/js.png" alt="">
+                <p>JavaScript</p>
+            </div>
+
+            <div class="fourth stack">
+                <img src="assets/icons/tech stacks/python.png" alt="">
+                <p>Python</p>
+            </div>
+        </div>
+
+        <h1 class="second-head" style="font-size: 1.3em;">Your Title</h1>
+        <a href="">Your Link</a>
+
+    </section>
+
+ 
+
+
+    
+    <script>
+        let nav_links = document.getElementById("links");
+let nav_links_selectors = document.querySelector(".nav-bar-links-contain");
+let statusVAR = false;
+
+nav_links.onclick = function() {
+    if(statusVAR == false) {
+        nav_links_selectors.style.opacity = "1";
+        nav_links_selectors.style.transition = "opacity .2s ease-in-out";
+        statusVAR = true;
+    } else {
+        statusVAR = false;
+        nav_links_selectors.style.transition = "opacity .2s ease-in-out";
+        nav_links_selectors.style.opacity = "0";
+    }
+    
+} 
+    </script>
+</body>
+</html>
