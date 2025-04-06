@@ -5,7 +5,10 @@
 <img height="200" src="assets/img/Capture.PNG" />
 
 # How to get started?
-To get started <a href="">click this link</a> to download the template file, and once you downloaded it, you can change anything you want.
+To get started <a href="template-by-ander" download>click this link</a> to download the template file, and once you downloaded it, you can change anything you want.
+
+# Note:
+You don't need to download the style file in the stylesheets folder, all styles are in the template.
 
 <b>👍 ENJOY IT</b>
 
